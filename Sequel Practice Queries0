@@ -1,0 +1,39 @@
+## 1. What was the hottest day in our data set? Where was that?
+
+select
+	start_station,
+	count(*) trip_count
+from 
+	trips
+group by start_station
+
+
+
+## 2. How many trips started at each station?
+
+select
+	start_station,
+	count(*) trip_count
+from 
+	trips
+group by start_station
+
+
+
+## 3. What's the shortest trip that happened?
+
+select
+	min(duration)
+from 
+	trips
+
+
+
+## 4. What is the average trip duration, by end station?
+
+select
+	end_station,
+	avg(duration) duration
+from
+	trips
+group by end_station
